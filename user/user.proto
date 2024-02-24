@@ -1,0 +1,16 @@
+syntax = "proto3";
+package user;
+option go_package = "github.com/gaomqq/mg/user";
+
+
+service User {
+  rpc Login(LoginRequest) returns (LoginResponse);
+}
+
+message LoginRequest {
+  string Name = 10;
+}
+
+message LoginResponse {
+  string Message = 10;
+}
